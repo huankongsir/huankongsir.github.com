@@ -1,0 +1,156 @@
+
+
+body {
+
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+table {
+
+    padding: 0px;
+    border-collapse: collapse;
+
+}
+
+th,td {
+
+    border: 1px solid black;
+    border-collapse: collapse;
+    margin: 0px;
+    padding: 4px 12px;
+    text-align: center;
+}
+
+.grid {
+
+    width: 1272px;
+    height: 972px;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 24px;
+
+
+
+}
+
+.imgContain {
+
+    width: 100%;
+    height: 100%;
+    background-image: url(img/car.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: transform 0.5s ease-in-out;
+    /* position: absolute;
+    top: 0px;
+    right: 0px; */
+    
+
+   
+
+
+}
+
+.imgContain:hover {
+
+    
+    transform: scale(1.2);
+    
+    
+
+
+}
+/* /*  */
+.parent {
+
+    width: 100%;
+    height: 100%;
+    /* position: relative; */
+    overflow: hidden;
+    border-radius: 24px;
+    /* background-color: rgb(217, 217, 217); */
+    
+
+} 
+
+.imgContain:hover::after {
+    content: ""; /* 添加伪元素 */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.25); /* 黑色透明度遮罩 */
+}
+
+.h1 {
+
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.imgC {
+
+    width: 1200px;
+    height: 600px;
+    overflow: hidden;
+    border-radius: 24px;
+    position: relative;
+
+}
+
+.pic {
+
+    width: 100%;
+
+}
+
+.imgC:hover::after {
+
+   content: "";
+   background-color: rgba(0, 0, 0, 0.248);
+   position: absolute;
+   
+   top: 0;
+   right: 0;
+   width: 1200px;
+   height: 600px;
+ 
+}
+.imgC:hover::before {
+
+    content: "即将登场";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 96px;
+    font-weight: 900;
+    color: rgb(255, 255, 255);
+    transform: translate(-50%, -50%); 
+    text-align: center;
+    z-index: 2;
+    background-image: linear-gradient(to right, red, orange); /* 定义渐变背景 */
+    -webkit-background-clip: text; /* 使用 Webkit 前缀，兼容某些浏览器 */
+    background-clip: text; /* 将渐变应用到文本 */
+    color: transparent; /* 隐藏文本颜色 */
+
+
+
+ 
+ }
+
+ /* .imgC:hover::before {
+    content: "即将登场";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 96px;
+    font-weight: 900;
+    color: rgb(255, 255, 255);
+    transform: translate(-50%, -50%); /* 水平和垂直方向上居中 */
+    /* text-align: center; 仅在水平方向上居中 */
+/* } */
